@@ -6,36 +6,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="227.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button fx:id="One" layoutX="31.0" layoutY="90.0" mnemonicParsing="false" onAction="#OneEvent" prefHeight="40.0" prefWidth="48.0" text="1" />
-      <Button fx:id="Calculate" layoutX="150.0" layoutY="302.0" mnemonicParsing="false" onAction="#CalculeteEvent" prefHeight="40.0" prefWidth="48.0" text="OK!" textOverrun="CLIP" />
-      <Button layoutX="92.0" layoutY="90.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="2" />
-      <Button layoutX="150.0" layoutY="90.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="3" />
-      <Button layoutX="31.0" layoutY="145.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="4" />
-      <Button layoutX="92.0" layoutY="145.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="5" />
-      <Button layoutX="150.0" layoutY="145.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="6" />
-      <Button layoutX="31.0" layoutY="197.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="7" />
-      <Button layoutX="92.0" layoutY="197.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="8" />
-      <Button layoutX="150.0" layoutY="197.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="9" />
-      <Button layoutX="150.0" layoutY="251.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="+">
+      <Button fx:id="one" layoutX="31.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="1" />
+      <Button fx:id="calculate" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="=" textOverrun="WORD_ELLIPSIS" />
+      <Button fx:id="two" layoutX="92.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="2" />
+      <Button fx:id="three" layoutX="150.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="3" />
+      <Button fx:id="four" layoutX="31.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="4" />
+      <Button fx:id="five" layoutX="92.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="5" />
+      <Button fx:id="six" layoutX="150.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="6" />
+      <Button fx:id="seven" layoutX="31.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="7" />
+      <Button fx:id="eight" layoutX="92.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="8" />
+      <Button fx:id="nine" layoutX="150.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="9" />
+      <Button fx:id="plus" layoutX="213.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="+">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="92.0" layoutY="251.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="-">
+      <Button fx:id="minus" layoutX="213.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="-">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="31.0" layoutY="302.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="*">
+      <Button fx:id="multiply" layoutX="213.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="*">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <TextField layoutX="32.0" layoutY="29.0" prefHeight="48.0" prefWidth="164.0" />
-      <Button layoutX="92.0" layoutY="302.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="48.0" text="/" />
-      <Button layoutX="29.0" layoutY="251.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="52.0" text="." />
-      <Label layoutX="70.0" layoutY="6.0" text="My Pocket Asian" />
+      <TextField fx:id="result" layoutX="32.0" layoutY="29.0" prefHeight="48.0" prefWidth="230.0" />
+      <Button fx:id="divide" layoutX="213.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="/" />
+      <Label layoutX="96.0" layoutY="6.0" text="My Pocket Asian" />
+      <Button fx:id="clear" layoutX="31.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="48.0" text="C" />
+      <Button fx:id="zero" layoutX="90.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="52.0" text="0" />
    </children>
 </AnchorPane>
